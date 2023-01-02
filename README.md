@@ -1,5 +1,6 @@
 # Data Science Salary Estimator: Project Overview 
-* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data scientists negotiate their income when they get a job.
+* I was inspired to create this project after watching YouTube series of Ken Jee about estimating Data Scientist's salary. His work helped me a lot on creating the roadmap I followed througout the project. 
+* Created a tool that estimates data science salaries to help data scientists negotiate their income when they get a job.
 * Engineered features from the text of each job description to quantify the value companies put on python, excel, aws, and spark. 
 * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
 * Built a client facing API using flask 
@@ -32,21 +33,25 @@ Dataset includes following columns:
 ## Data Cleaning
 Dataset was uncleaned and extremely messy, so I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:
 
-*	Parsed numeric data out of salary 
-*	Made columns for employer provided salary and hourly wages 
-*	Removed rows without salary 
+*  Removed rows without salary estimate 
+*  Removed some faulty rows from job type 
 *	Parsed rating out of company text 
+*  Removed unnecesary strings from salary estimate to make it more readable
+*	Parsed numeric data out of salary 
+*	Made a column for hourly wages 
+*  Added columns for minimum, maximum and average salary estimates
 *	Made a new column for company state 
-*	Added a column for if the job was at the company’s headquarters 
 *	Transformed founded date into age of company 
-*	Made columns for if different skills were listed in the job description:
+*	Made new columns for some skills that might be listed in the job description:
     * Python  
-    * R  
-    * Excel  
-    * AWS  
     * Spark 
-*	Column for simplified job title and Seniority 
-*	Column for description length 
+    * R  
+    * AWS  
+    * Excel  
+*  Parsed company size into numerical values
+*  Created a column for average revenue
+*  Columns for simplified title and position
+*  Created a new csv file for cleaned data
 
 ## EDA
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
