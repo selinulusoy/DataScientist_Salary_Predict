@@ -1,17 +1,18 @@
 # Data Science Salary Estimator: Project Overview 
-* I was inspired to create this project after watching YouTube series of Ken Jee about estimating Data Scientist's salary. His work helped me a lot on creating the roadmap I followed througout the project. 
-* Created a tool that estimates data science salaries to help data scientists negotiate their income when they get a job.
-* Engineered features from the text of each job description to quantify the value companies put on python, excel, aws, and spark. 
-* Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
-* Built a client facing API using flask 
+* I was inspired to create this project after watching a YouTube series by Ken Jee about estimating the salaries of data scientists. His work helped me create a roadmap for completing the project.
+* I created a tool that estimates data science job salaries. This tool is designed to help data scientists negotiate their income when they get a job.
+* Analyzed the text of each job description to quantify the value companies put on certain skills such as Python, Excel, AWS, and Spark. 
+* Used GridsearchCV to optimize Linear, Lasso, and Random Forest regressors to reach the best model.
+* Built a client facing API using Flask 
 
 ## Code and Resources Used 
 **Python Version:** 3.9.2  
+**Framework:** Anaconda (Jupyter Notebook and Spyder)
 **Packages:** pandas, numpy, sklearn, matplotlib, seaborn, flask, json, pickle  
 **For Web Framework Requirements:**  ```pip install -r requirements.txt```   
 **Flask Productionization:** https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
 
-## YouTube Project Walk-Through
+## Ken Jee YouTube Project Walk-Through
 https://www.youtube.com/playlist?list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5O1t
 
 ## Data
@@ -56,9 +57,10 @@ Dataset was uncleaned and extremely messy, so I needed to clean it up so that it
 ## EDA
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/salary_by_job_title.PNG "Salary by Position")
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/positions_by_state.png "Job Opportunities by State")
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/correlation_visual.png "Correlations")
+![image](https://user-images.githubusercontent.com/74883103/210280986-d688d940-bd27-4f69-9f61-07754bb8c358.png)
+![image](https://user-images.githubusercontent.com/74883103/210281031-ed453eab-2260-4ce6-8ae4-d999eee5ba5a.png)
+![image](https://user-images.githubusercontent.com/74883103/210281067-5e678083-db2c-4f16-81ec-394fa3b26c27.png)
+![image](https://user-images.githubusercontent.com/74883103/210281093-c328c67b-64f4-4628-b1f6-ccee8673ff0e.png)
 
 ## Model Building 
 
