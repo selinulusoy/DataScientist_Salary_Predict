@@ -55,7 +55,7 @@ Dataset was uncleaned and extremely messy, so I needed to clean it up so that it
 *  Created a new csv file for cleaned data
 
 ## EDA
-I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
+I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the tables. 
 
 ![image](https://user-images.githubusercontent.com/74883103/210280986-d688d940-bd27-4f69-9f61-07754bb8c358.png)
 ![image](https://user-images.githubusercontent.com/74883103/210281031-ed453eab-2260-4ce6-8ae4-d999eee5ba5a.png)
@@ -75,9 +75,9 @@ I tried three different models:
 
 ## Model performance
 The Random Forest model far outperformed the other approaches on the test and validation sets. 
-*	**Random Forest** : MAE = 11.22
-*	**Linear Regression**: MAE = 18.86
-*	**Ridge Regression**: MAE = 19.67
+*	**Random Forest** : MAE = 7.06
+*	**Linear Regression**: MAE = 13.40
+*	**Ridge Regression**: MAE = 9.81
 
 ## Productionization 
 In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary. 
